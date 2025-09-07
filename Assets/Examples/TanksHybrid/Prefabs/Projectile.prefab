@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cba1b63a0bccc4b12ac25f05d0ae2dd1, type: 2}
+  - {fileID: 2100000, guid: 3fd5bdcb44013ca4890c271752c543d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,8 +139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAfter: 2
-  rigidBody: {fileID: 4629190479245867726}
   force: 2000
+  damage: 1
+  rigidBody: {fileID: 4629190479245867726}
+  NetworkObject: {fileID: -8525389203924839276}
 --- !u!136 &2355290524794870353
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -188,7 +190,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &-8525389203924839276

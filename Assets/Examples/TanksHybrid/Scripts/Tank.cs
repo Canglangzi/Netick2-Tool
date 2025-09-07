@@ -40,8 +40,11 @@ namespace Netick.Examples.TanksHybrid
             
         [Networked] public  bool IsMoving { get; set; }
 
+
+        public NetworkObject NetworkObject;
         public override void NetworkStart()
         {
+            NetworkObject= gameObject.GetComponent<NetworkObject>();
             name = $"Player[{InputSource.PlayerId}|{(IsInputSource ? "local" : "remote")}]";
             if (IsServer)
             {
@@ -89,28 +92,29 @@ namespace Netick.Examples.TanksHybrid
             HandleMovement(input);
             
             HandleTurretRotation(input);
-            UpdateHealthDisplay();
             
             if (!IsResimulating)
             {
                 if (input.shoot)
                 {
-                    CmdFire();
+                    if (IsServer)
+                    {
+                        CmdFire();
+                    }
                 } 
             }
 
+            UpdateHealthDisplay();
         }
 
         public override void NetworkRender()
         {
-            // 更新动画
-            animator.SetBool("Moving", IsMoving);
-            
-            // 插值炮塔旋转
-            if (!IsInputSource)
+            if (IsProxy)
             {
+                animator.SetBool("Moving", IsMoving);
                 turret.rotation = Quaternion.Lerp(turret.rotation, TurretRotation, Sandbox.DeltaTime * 10f);
             }
+          
         }
 
         private void HandleMovement(TankInput input)
@@ -130,9 +134,7 @@ namespace Netick.Examples.TanksHybrid
 
         private void HandleTurretRotation(TankInput input)
         {
-            // // 只有输入源计算炮塔旋转
-            if (IsInputSource)
-            {
+            
                 Ray ray = Camera.main.ScreenPointToRay(input.mousePosition);
                 if (Physics.Raycast(ray, out RaycastHit hit, 100))
                 {
@@ -140,9 +142,19 @@ namespace Netick.Examples.TanksHybrid
                     turret.LookAt(lookRotation);
                     TurretRotation = turret.rotation;
                 }
-            }
         }
 
+
+        [OnChanged(nameof(TurretRotation))]
+        public void OnTurretRotation(OnChangedData info)
+        {
+            turret.rotation = TurretRotation;
+        }
+        [OnChanged(nameof(LastHealth))]
+        public void OnUpdateHealthDisplay(OnChangedData info)
+        {
+            UpdateHealthDisplay();
+        }
         private void UpdateHealthDisplay()
         {
             // 手动同步健康值

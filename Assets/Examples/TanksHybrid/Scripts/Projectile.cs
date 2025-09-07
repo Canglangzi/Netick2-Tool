@@ -43,7 +43,9 @@ namespace Netick.Examples.TanksHybrid
         {
             Sandbox.Destroy(NetworkObject);
         }
-        
+            
+        // 尝试获取坦克组件
+        Tank tank = null;
         void OnTriggerEnter(Collider other)
         {
             // 只在服务器处理碰撞
@@ -52,17 +54,8 @@ namespace Netick.Examples.TanksHybrid
             // 忽略与自身的碰撞
             if (other.transform == _ownerTank?.transform) 
                 return;
-            
-            // 尝试获取坦克组件
-            Tank tank = null;
-            
-            // 检查碰撞对象自身是否有Tank组件
-            if (other.TryGetComponent(out tank))
-            {
-                ApplyDamage(tank);
-            }
             // 检查父对象是否有Tank组件
-            else if (other.transform.parent != null && 
+            if (other.transform.parent != null && 
                      other.transform.parent.TryGetComponent(out tank))
             {
                 ApplyDamage(tank);
@@ -82,7 +75,7 @@ namespace Netick.Examples.TanksHybrid
             if (tank.health <= 0)
             {
                 Sandbox.Kick(tank.InputSource);
-                Sandbox.DestroyPool(tank.gameObject);
+                Sandbox.Destroy(tank.NetworkObject);
             }
         }
     }

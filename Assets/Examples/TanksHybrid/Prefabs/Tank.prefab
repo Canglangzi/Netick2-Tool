@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 114654712548978148}
   - component: {fileID: 6900008319038825817}
   - component: {fileID: 4023915648376028965}
+  - component: {fileID: 829270235926211798}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -32,6 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5803173220413450940}
   - {fileID: 5024428205385196439}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106,6 +108,28 @@ MonoBehaviour:
   _PrefabId: -1
   _SceneId: 369784282
   _RuntimeSceneId: -1
+--- !u!114 &829270235926211798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916082411674582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 682374318, guid: da78c2c9df60edc4fb5f65b59fa57c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Netick.Unity.dll::Netick.Unity.NetworkTransform
+  RenderTransform: {fileID: 0}
+  TeleportDistance: 50
+  PositionPrecision: 3
+  Settings: -1
+  TransformSpace: 1
+  UseForAOIPosition: 1
+  EnablePredictionErrorCorrectionSmoothing: 1
+  CorrectionMultiplier: 3
+  TeleportErrorThreshold: 50
+  _interpolationSource: 0
 --- !u!1 &6882277736259849937
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +262,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5803173220413450940}
   - {fileID: 2155495746218491392}
   m_Father: {fileID: 4492442352427800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -248,7 +271,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5024428205385196439}
+    m_TransformParent: {fileID: 4492442352427800}
     m_Modifications:
     - target: {fileID: 3638700596990255941, guid: dad07e68d3659e6439279d0d4110cf4c, type: 3}
       propertyPath: m_Name
