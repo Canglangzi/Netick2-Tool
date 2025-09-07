@@ -523,9 +523,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1363492088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1923973434, guid: da78c2c9df60edc4fb5f65b59fa57c41, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fd7aef5adfffec48bf7d78bee791fbf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Netick.Unity.dll::Netick.Unity.NetworkObject
+  m_EditorClassIdentifier: Utils::ReplicatedObject
   _AoILayer: 0
   _BroadPhaseFilter: 0
   _NarrowPhaseFilter: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   Children: []
   PrefabIndex: -1
   _PrefabId: -1
-  _SceneId: -852374428
+  _SceneId: 59385945
   _RuntimeSceneId: -1
 --- !u!1001 &1701409119
 PrefabInstance:
