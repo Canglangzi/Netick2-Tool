@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2061283162, guid: da78c2c9df60edc4fb5f65b59fa57c41, type: 3}
+  m_Name: netickConfig
+  m_EditorClassIdentifier: Netick.Unity.dll::Netick.Unity.NetickConfig
+  Prefabs:
+  - {fileID: 1945431331495393237, guid: 3529b851a8730a4488b777d8ddcae818, type: 3}
+  - {fileID: 205927898541842895, guid: 94d14b628f1e7c44d8a78100f90b97b1, type: 3}
+  - {fileID: 211847493469889410, guid: feabaee2c9b98a243bb00287f006b087, type: 3}
+  - {fileID: 8369306572734454416, guid: 9b85e28ef03aed24bbc02b49edddbc11, type: 3}
+  - {fileID: -6964264407914337296, guid: a1c0a7e625527b84d83e892e0eac9146, type: 3}
+  - {fileID: -4912384317378991485, guid: 2fec890c054845449b910ea261e3ff46, type: 3}
+  - {fileID: 3829231688860149251, guid: dc62ed4e37b7d4551b8c6a5edc0b36b4, type: 3}
+  - {fileID: 3119928566416896478, guid: 8e024f835ef4842998861f956ca7cb5c, type: 3}
+  - {fileID: -8525389203924839276, guid: 91f895dc7a93a4b9394f46cee0fb90c0, type: 3}
+  - {fileID: 4023915648376028965, guid: c40046c86ca624e6d81e675eb121a8d1, type: 3}
+  - {fileID: 7922188728553362543, guid: b6017d4078c8c3245a6a5231cecc6f53, type: 3}
+  AutoGetPrefabs: 1
+  PrefabsPath: Assets/
+  TickRate: 30
+  MaxAllowedTimestep: 0.2
+  MaxPlayers: 16
+  MaxObjects: 1500
+  MaxSendableDataSize: 15000
+  StateAllocatorBlockSize: 131072
+  MetaAllocatorBlockSize: 1048576
+  AggressivePreAllocation: 1
+  MaxPredictedTicks: 64
+  ServerDivisor: 1
+  PhysicsPrediction: 1
+  PhysicsType: 1
+  InvokeRenderInHeadless: 1
+  InvokeUpdate: 1
+  RenderInvokeOrder: 1
+  MaxAdditiveScenes: 4
+  InputReuseAtLowFPS: 1
+  ExtraInterpolationDelay: 0
+  AccurateLocalInterpolation: 1
+  EnableMultithreading: 1
+  EnableLogging: 1
+  EnableProfiling: 1
+  EnableLagCompensation: 0
+  EnableInterestManagement: 0
+  EnableNarrowphaseFiltering: 0
+  CustomGroupCount: 2
+  AoILayerCount: 1
+  WorldSize: {x: 8000, y: 1, z: 8000}
+  FastSerialization: 1
+  SyncTransformOnSpawn: 1
+  IncludeInactiveObjects: 1
+  AoILayer0CellSize: 750
+  AoILayer1CellSize: 750
+  AoILayer2CellSize: 750
+  AoILayer3CellSize: 750
+  AoILayer4CellSize: 750
+  RenderWorldGrid: 0
+  RenderedLayer: 0
+  LagCompensationDebug: 1
