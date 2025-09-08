@@ -69,7 +69,7 @@ namespace Netick.Examples.CCU
             input.vertical = Input.GetAxis("Vertical");
 
             // 切换自动移动模式（例如按Tab键）
-            input.toggleAutoMove = Input.GetKeyDown(KeyCode.Tab);
+            input.toggleAutoMove |= Input.GetKeyDown(KeyCode.Tab);
 
             // 提交输入
             Sandbox.SetInput(input);
