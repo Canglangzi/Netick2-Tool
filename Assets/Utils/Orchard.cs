@@ -246,4 +246,13 @@ public partial class Orchard : NetworkSandbox
         }
         
     }
+    
+    
+    [Tooltip("How many frames to keep")] 
+    public float secondsHistory = 4f;
+    public int GetMaxFramePoints()
+    {
+        return (int) (secondsHistory / (1f / Game.NetickConfig.TickRate));
+    }
+
 }

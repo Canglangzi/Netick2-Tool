@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2323403898564241752}
   - component: {fileID: 2554246830667592287}
   - component: {fileID: -4912384317378991485}
+  - component: {fileID: -991551240180885842}
   m_Layer: 0
   m_Name: Sandbox
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Utils::Orchard
   worldColor: {r: 1, g: 1, b: 1, a: 1}
   allSubsystems: []
+  secondsHistory: 4
   onPlayerSpawned:
     m_PersistentCalls:
       m_Calls: []
@@ -80,3 +82,15 @@ MonoBehaviour:
   _PrefabId: -1
   _SceneId: 1978434830
   _RuntimeSceneId: -1
+--- !u!114 &-991551240180885842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279933767444514779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6566fb662f9e8c248bc3149af65e489b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CocKleBurs.GameFrameWork.LagCompensation.GameLagCompensation

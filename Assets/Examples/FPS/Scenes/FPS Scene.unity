@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -443,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5922d4a2e010aac4cb20e7dcf04236f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SandboxPrefab: {fileID: 0}
+  SandboxPrefab: {fileID: 3279933767444514779, guid: 2fec890c054845449b910ea261e3ff46, type: 3}
   Transport: {fileID: 11400000, guid: 45d8249dfdf511d429f92c6a4a4e26f4, type: 2}
   Mode: 2
   Clients: 1
@@ -505,8 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d95c28de1bac54f8b26fc8dd960077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefab: {fileID: 7011933354638177272, guid: d66d5a97430d3364890108321123b309,
-    type: 3}
+  PlayerPrefab: {fileID: 7011933354638177272, guid: d66d5a97430d3364890108321123b309, type: 3}
   SpawnPosition: {fileID: 10129275}
   HorizontalOffset: 5
   StaggerSpawns: 1
@@ -522,6 +518,7 @@ GameObject:
   - component: {fileID: 1318413501}
   - component: {fileID: 1318413500}
   - component: {fileID: 1318413502}
+  - component: {fileID: 1318413503}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -537,9 +534,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318413499}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 11
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -589,8 +585,12 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!4 &1318413501
 Transform:
   m_ObjectHideFlags: 0
@@ -618,6 +618,35 @@ MonoBehaviour:
   m_Script: {fileID: -355052428, guid: da78c2c9df60edc4fb5f65b59fa57c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1318413503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318413499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &1929588641
 GameObject:
   m_ObjectHideFlags: 0

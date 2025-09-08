@@ -122,10 +122,15 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 66fbf50c752c24e47ae20c6ff7d96b43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -143,6 +148,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -160,6 +166,9 @@ GameObject:
   - component: {fileID: 3197551385548652812}
   - component: {fileID: 1417749684482701243}
   - component: {fileID: 6918953610149222310}
+  - component: {fileID: 206643917730724777}
+  - component: {fileID: 6418497164910049890}
+  - component: {fileID: 8471424354264579102}
   m_Layer: 0
   m_Name: FPS Player
   m_TagString: Untagged
@@ -195,18 +204,19 @@ MonoBehaviour:
   m_Script: {fileID: -1923973434, guid: da78c2c9df60edc4fb5f65b59fa57c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _AoILayer: 0
   _BroadPhaseFilter: 0
-  _SpatialPrioritization: 0
   _NarrowPhaseFilter: 0
-  AddToNetworkLoop: 1
-  GlobalObjectIdHash: 0
-  SceneId: -1
-  _PrefabId: 5
+  _SpatialPrioritization: 0
+  _PredictionMode: 0
+  _AddToNetworkLoop: 1
+  _IsPersistent: 0
   PrefabRoot: {fileID: 0}
   Children: []
   PrefabIndex: -1
-  Persistent: 0
-  _predictionMode: 0
+  _PrefabId: -1
+  _SceneId: 1923592773
+  _RuntimeSceneId: -1
 --- !u!114 &3197551385548652812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,10 +234,9 @@ MonoBehaviour:
   PositionPrecision: 3
   Settings: 5
   TransformSpace: 1
+  UseForAOIPosition: 1
   EnablePredictionErrorCorrectionSmoothing: 0
-  InterpolationMultiplier: 20
   CorrectionMultiplier: 3
-  CorrectionMaxBlendAlpha: 0.7
   TeleportErrorThreshold: 50
   _interpolationSource: 0
 --- !u!143 &1417749684482701243
@@ -245,7 +254,6 @@ CharacterController:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -274,3 +282,64 @@ MonoBehaviour:
   _sensitivityY: -1
   _cameraParent: {fileID: 3369032719007731524}
   <YawPitch>k__BackingField: {x: 0, y: 0}
+--- !u!114 &206643917730724777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011933354638177272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15fcf804fa7d9f4aae843dea5a519f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CocKleBurs.GameFrameWork.LagCompensation.LagCompensatedObject
+  showPreviousPositionsGizmos: 1
+--- !u!114 &6418497164910049890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011933354638177272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a4c9eb1b4f1c1449d3ac6908636210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  <CurrentHealth>k__BackingField: 0
+  maxHealth: 100
+--- !u!114 &8471424354264579102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011933354638177272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed475eb3b080ca043a65c52cf4a97b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Netick.Examples.WeaponSystem.WeaponSystem
+  weapons:
+  - weaponName: Gun1
+    weaponModel: {fileID: 3777648925818955132, guid: 000ff6e2b3c38fd499b4012b62f383a7, type: 3}
+    muzzleFlash: {fileID: 0}
+    damage: 30
+    fireRate: 0
+    range: 1000
+    magazineSize: 30
+    currentAmmo: 30
+    reserveAmmo: 2000
+  weaponMountPoint: {fileID: 3369032719007731524}
+  switchWeaponCooldown: 0.5
+  <CurrentWeaponIndex>k__BackingField: 0
+  <NextWeaponSwitchTime>k__BackingField: 0
+  <IsReloading>k__BackingField: 0
+  _currentWeapon:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

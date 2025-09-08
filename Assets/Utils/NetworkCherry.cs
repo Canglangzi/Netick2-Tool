@@ -106,6 +106,6 @@ public class NetworkCherry : NetworkBehaviour,INetickSceneLoadDone
         }
 	
         public virtual void OnActive(NetworkConnection connection) { }
-
+	
         public float NetworkScaledFixedDeltaTime => _orchard.ScaledFixedDeltaTime;
 }

@@ -41,7 +41,7 @@ MonoBehaviour:
   MaxAllowedTimestep: 0.2
   MaxPlayers: 16
   MaxObjects: 15000
-  MaxSendableDataSize: 15000
+  MaxSendableDataSize: 55000
   StateAllocatorBlockSize: 524288
   MetaAllocatorBlockSize: 4194304
   AggressivePreAllocation: 1

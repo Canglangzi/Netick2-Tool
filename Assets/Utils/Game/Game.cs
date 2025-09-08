@@ -25,14 +25,19 @@ public static partial class Game
         OnConfigLoaded?.Invoke(networkcfg);
     }
     
-  //  [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void InitializeBeforeSceneLoad()
     {
-        var loadManagerGO = new GameObject("LoadManager");
-        Object.DontDestroyOnLoad(loadManagerGO);
-        LoadManager = loadManagerGO.AddComponent<LoadManager>();
         
-        LoadRuntimeSettingsAndThenLoadAsset().Forget();
+        var config = Network.CloneDefaultConfig();
+        Game.NotifyConfigLoaded(config);
+        
+        ///Odin
+        // var loadManagerGO = new GameObject("LoadManager");
+        // Object.DontDestroyOnLoad(loadManagerGO);
+        // LoadManager = loadManagerGO.AddComponent<LoadManager>();
+        //
+        // LoadRuntimeSettingsAndThenLoadAsset().Forget();
     }
 
     public static async UniTask  Load()
