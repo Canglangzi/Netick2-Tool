@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66869b09091574e4c972f42f5ae2268e, type: 3}
+  m_Name: FishMark
+  m_EditorClassIdentifier: 
+  autoGenerate: 1
+  networkOnly: 1
+  poolByDefault: 0
+  folder: {fileID: 102900000, guid: 77fc54a8de22e35469dcd6302788a144, type: 3}
+  prefabs:
+  - prefab: {fileID: 5999752480146570505, guid: ce611468ecbf48540a5a5c8dc5bc09f0, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 7438401955632367442, guid: 9fed8b9ac34a163478b62468c09dbc36, type: 3}
+    pooled: 0
+    warmupCount: 5
