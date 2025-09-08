@@ -19,10 +19,13 @@ MonoBehaviour:
   - {fileID: 8079286830074380037, guid: 614e28b6213c14195b8661c153bf4ee4, type: 3}
   - {fileID: 211847493469889410, guid: feabaee2c9b98a243bb00287f006b087, type: 3}
   - {fileID: 8369306572734454416, guid: 9b85e28ef03aed24bbc02b49edddbc11, type: 3}
+  - {fileID: 2378787198144777010, guid: 5f7a7f34494ed40268eff49dbf9168bf, type: 3}
+  - {fileID: 8333823586709811263, guid: b1651eaf8c7564a1c86031dfbb8a7b28, type: 3}
   - {fileID: -6964264407914337296, guid: a1c0a7e625527b84d83e892e0eac9146, type: 3}
   - {fileID: -4912384317378991485, guid: 2fec890c054845449b910ea261e3ff46, type: 3}
   - {fileID: 3829231688860149251, guid: dc62ed4e37b7d4551b8c6a5edc0b36b4, type: 3}
   - {fileID: 3119928566416896478, guid: 8e024f835ef4842998861f956ca7cb5c, type: 3}
+  - {fileID: 4236254535205747173, guid: c1affccc0b0c040a486023a5cff7fd46, type: 3}
   - {fileID: -8525389203924839276, guid: 91f895dc7a93a4b9394f46cee0fb90c0, type: 3}
   - {fileID: 4023915648376028965, guid: c40046c86ca624e6d81e675eb121a8d1, type: 3}
   - {fileID: 7922188728553362543, guid: b6017d4078c8c3245a6a5231cecc6f53, type: 3}
@@ -33,8 +36,8 @@ MonoBehaviour:
   MaxPlayers: 16
   MaxObjects: 15000
   MaxSendableDataSize: 15000
-  StateAllocatorBlockSize: 131072
-  MetaAllocatorBlockSize: 1048576
+  StateAllocatorBlockSize: 524288
+  MetaAllocatorBlockSize: 4194304
   AggressivePreAllocation: 1
   MaxPredictedTicks: 64
   ServerDivisor: 1
