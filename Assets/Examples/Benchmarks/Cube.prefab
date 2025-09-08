@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7453262848094671054}
   - component: {fileID: 3622427307624202109}
   - component: {fileID: 186798520853306943}
-  - component: {fileID: -3808449334615494248}
+  - component: {fileID: 4543590296894901021}
+  - component: {fileID: 1529644481080855027}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -64,6 +65,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -85,6 +88,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -122,15 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43508ef331ca3fd4bb08c5fa57a99587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
   _isActive: 1
   _axes: 3
   _rotationChance: 0.33
@@ -139,7 +134,7 @@ MonoBehaviour:
   _moveRate: 3
   _rotateRate: 30
   _range: 6
---- !u!114 &-3808449334615494248
+--- !u!114 &4543590296894901021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,23 +143,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 5999752480146570505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 817fe5016bd0a2a49a95b6eb338bb132, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fd7aef5adfffec48bf7d78bee791fbf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
-  _syncPosition: 2
-  _syncRotation: 2
-  _syncScale: 1
-  _syncParent: 0
-  _interpolateSettings: 1
-  _maxBufferSize: 2
-  _ownerAuth: 1
-  _characterControllerPatch: 0
+  m_EditorClassIdentifier: Utils::ReplicatedObject
+  _AoILayer: 0
+  _BroadPhaseFilter: 0
+  _NarrowPhaseFilter: 0
+  _SpatialPrioritization: 0
+  _PredictionMode: 0
+  _AddToNetworkLoop: 1
+  _IsPersistent: 0
+  PrefabRoot: {fileID: 0}
+  Children: []
+  PrefabIndex: -1
+  _PrefabId: -1
+  _SceneId: 477960821
+  _RuntimeSceneId: -1
+--- !u!114 &1529644481080855027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999752480146570505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 682374318, guid: da78c2c9df60edc4fb5f65b59fa57c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Netick.Unity.dll::Netick.Unity.NetworkTransform
+  RenderTransform: {fileID: 0}
+  TeleportDistance: 50
+  PositionPrecision: 3
+  Settings: 31
+  TransformSpace: 1
+  UseForAOIPosition: 1
+  EnablePredictionErrorCorrectionSmoothing: 0
+  CorrectionMultiplier: 3
+  TeleportErrorThreshold: 50
+  _interpolationSource: 0

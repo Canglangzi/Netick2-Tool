@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: netickConfig
   m_EditorClassIdentifier: Netick.Unity.dll::Netick.Unity.NetickConfig
   Prefabs:
+  - {fileID: 4543590296894901021, guid: ce611468ecbf48540a5a5c8dc5bc09f0, type: 3}
   - {fileID: 6276855212308729943, guid: 84bdaf9c034444f408cc66234ee3344d, type: 3}
   - {fileID: 8143126971102408644, guid: 98e433893a4b70f41a8ab2145afe3e07, type: 3}
   - {fileID: 4469672062832013922, guid: 8e254087cbaecc049ac87981c263d46c, type: 3}
