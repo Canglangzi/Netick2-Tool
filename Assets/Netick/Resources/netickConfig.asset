@@ -15,6 +15,8 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 1945431331495393237, guid: 3529b851a8730a4488b777d8ddcae818, type: 3}
   - {fileID: 205927898541842895, guid: 94d14b628f1e7c44d8a78100f90b97b1, type: 3}
+  - {fileID: 7575544303936414078, guid: d0f3b049f6bef4cc6930c57a2146ca52, type: 3}
+  - {fileID: 8079286830074380037, guid: 614e28b6213c14195b8661c153bf4ee4, type: 3}
   - {fileID: 211847493469889410, guid: feabaee2c9b98a243bb00287f006b087, type: 3}
   - {fileID: 8369306572734454416, guid: 9b85e28ef03aed24bbc02b49edddbc11, type: 3}
   - {fileID: -6964264407914337296, guid: a1c0a7e625527b84d83e892e0eac9146, type: 3}
@@ -29,7 +31,7 @@ MonoBehaviour:
   TickRate: 30
   MaxAllowedTimestep: 0.2
   MaxPlayers: 16
-  MaxObjects: 1500
+  MaxObjects: 15000
   MaxSendableDataSize: 15000
   StateAllocatorBlockSize: 131072
   MetaAllocatorBlockSize: 1048576
