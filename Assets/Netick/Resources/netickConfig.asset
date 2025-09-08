@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: netickConfig
   m_EditorClassIdentifier: Netick.Unity.dll::Netick.Unity.NetickConfig
   Prefabs:
+  - {fileID: 6276855212308729943, guid: 84bdaf9c034444f408cc66234ee3344d, type: 3}
+  - {fileID: 8143126971102408644, guid: 98e433893a4b70f41a8ab2145afe3e07, type: 3}
+  - {fileID: 4469672062832013922, guid: 8e254087cbaecc049ac87981c263d46c, type: 3}
+  - {fileID: 9177126579482737267, guid: 09a0cccbd8f361641bd963785a4b016c, type: 3}
   - {fileID: 1945431331495393237, guid: 3529b851a8730a4488b777d8ddcae818, type: 3}
   - {fileID: 205927898541842895, guid: 94d14b628f1e7c44d8a78100f90b97b1, type: 3}
   - {fileID: 7575544303936414078, guid: d0f3b049f6bef4cc6930c57a2146ca52, type: 3}
   - {fileID: 8079286830074380037, guid: 614e28b6213c14195b8661c153bf4ee4, type: 3}
+  - {fileID: 5100633453439203130, guid: d66d5a97430d3364890108321123b309, type: 3}
   - {fileID: 211847493469889410, guid: feabaee2c9b98a243bb00287f006b087, type: 3}
   - {fileID: 8369306572734454416, guid: 9b85e28ef03aed24bbc02b49edddbc11, type: 3}
   - {fileID: 2378787198144777010, guid: 5f7a7f34494ed40268eff49dbf9168bf, type: 3}

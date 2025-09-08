@@ -1,7 +1,7 @@
 using Netick.Unity;
 using UnityEngine;
 
-namespace Mirror.Examples.Pong
+namespace Netick.Examples.Pong
 {
     public class Ball : NetworkBehaviour
     {

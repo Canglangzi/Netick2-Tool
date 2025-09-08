@@ -57,10 +57,13 @@ namespace Mirror.Examples.Pong
             
             NetworkObject racket = sandbox.NetworkInstantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation,sandbox.GetPlayerById(playerId));
               
-            // 如果当前玩家数量为2，生成球
-            if (sandbox.Players.Count == 2 && ball == null)
+           Debug.Log(sandbox.Players.Count.ToString());
+            if (sandbox.Players.Count == 2)
             {
-                sandbox.NetworkInstantiate(ball);
+                if (IsServer)
+                {
+                    sandbox.NetworkInstantiate(ball);
+                }
             }
             sandbox.SetPlayerObject(playerId, racket);
         }
